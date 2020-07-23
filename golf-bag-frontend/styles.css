@@ -1,0 +1,9 @@
+.vertical {
+  border-left: 6px solid black;
+  height: 900px;
+  position: relative;
+  left: 65%;
+  margin-left: -3px;
+  top: 0;
+  padding: 10px;
+}
