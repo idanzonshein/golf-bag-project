@@ -12,23 +12,27 @@
       <h1>Golf Bag Customizer</h1>
     </header>
 
-    <h3>Select Clubs Below:</h3>
 
-    <div class='row'>
+    <div class="container">
+        <form id="new-club-form">
+          <label for="add-comment-input"> <h4>Add Your Bag!</h4> </label>
+          <input class="form-control" type="text" id="add-bagName-input" />
+          <button class="btn btn-success buttons" type="submit" name="comment-button">Name Bag</button>
+        </form>
+      </div>
 
-      <div class='col-md-4'>
-        <ul class="list-driver" id="list-driver">
+      <div id="bag-build">
+
+      </div>
+
+      <div>
+        <ul id="bag-list" class="list-group">
+
         </ul>
       </div>
 
 
-    </div>
 
-
-
-    <div class = "vertical">
-      <h3>Your Bag:</h3>
-    </div>
 
 
     <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
