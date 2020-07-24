@@ -1,7 +1,32 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+bag = Bag.create(
+  name: "Idan",
+  color: "Black",
+)
+
+Club.create(
+  bag: bag,
+  club_type: "Driver",
+  loft: "",
+  brand: "Callaway",
+  model: "MAVRIK",
+  price: "499.99",
+  image_source: "https://dks.scene7.com/is/image/GolfGalaxy/19CWYMMVRKDRHLM40DRV?qlt=70&wid=600&fmt=pjpeg",
+)
+
+Club.create(
+  club_type: "Driver",
+  loft: "",
+  brand: "TaylorMade",
+  model: "SIM",
+  price: "549.99.99",
+  image_source: "https://dks.scene7.com/is/image/GolfGalaxy/19TYMMSMDRVRDMNXXDRV?qlt=70&wid=600&fmt=pjpeg",
+)
+
+Club.create(
+  club_type: "Driver",
+  loft: "",
+  brand: "TaylorMade",
+  model: "SIM",
+  price: "549.99.99",
+  image_source: "https://dks.scene7.com/is/image/GolfGalaxy/19TYMMSMDRVRDMNXXDRV?qlt=70&wid=600&fmt=pjpeg",
+)

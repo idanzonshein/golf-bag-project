@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_191256) do
   end
 
   create_table "clubs", force: :cascade do |t|
-    t.string "type"
+    t.string "club_type"
     t.string "loft"
     t.string "brand"
     t.string "model"
@@ -31,11 +31,9 @@ ActiveRecord::Schema.define(version: 2020_07_22_191256) do
     t.string "handedness"
     t.string "lie"
     t.string "image_source"
-    t.bigint "bag_id", null: false
+    t.integer "bag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["bag_id"], name: "index_clubs_on_bag_id"
   end
 
-  add_foreign_key "clubs", "bags"
 end
