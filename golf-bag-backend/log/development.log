@@ -22242,3 +22242,1473 @@ Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1529)
 Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2329)
 
 
+Started GET "/bags" for ::1 at 2020-07-28 08:08:05 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.6ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 0.1ms | ActiveRecord: 13.7ms | Allocations: 25347)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:08:05 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:08:05 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:08:05 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1636)
+
+
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1420)
+
+
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2564)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:20:59 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 4354)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:20:59 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:20:59 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:20:59 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (2.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 1601)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 2518)
+
+
+Started POST "/bags" for ::1 at 2020-07-28 08:21:22 -0400
+Processing by BagsController#create as JSON
+  Parameters: {"name"=>"Pat", "bag"=>{"name"=>"Pat"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+  [1m[36mBag Create (0.8ms)[0m  [1m[32mINSERT INTO "bags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pat"], ["created_at", "2020-07-28 12:21:22.377333"], ["updated_at", "2020-07-28 12:21:22.377333"]]
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 2767)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:21:31 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.6ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 5185)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:21:31 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:21:31 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:21:31 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 08:21:31 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 1939)
+
+
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (3.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 3307)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 3894)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 1138)
+
+
+Started POST "/bags/5/clubs" for ::1 at 2020-07-28 08:21:57 -0400
+Processing by ClubsController#create as JSON
+  Parameters: {"club_type"=>"Driver", "brand"=>"Titlest", "model"=>"New", "loft"=>"4", "bag_id"=>"5", "club"=>{"club_type"=>"Driver", "loft"=>"4", "brand"=>"Titlest", "model"=>"New"}}
+  [1m[36mBag Load (0.4ms)[0m  [1m[34mSELECT "bags".* FROM "bags" WHERE "bags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/clubs_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+  [1m[36mClub Create (1.2ms)[0m  [1m[32mINSERT INTO "clubs" ("club_type", "loft", "brand", "model", "bag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["club_type", "Driver"], ["loft", "4"], ["brand", "Titlest"], ["model", "New"], ["bag_id", 5], ["created_at", "2020-07-28 12:21:57.052042"], ["updated_at", "2020-07-28 12:21:57.052042"]]
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 3661)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:21:57 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:21:57 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 08:21:57 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:21:57 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:21:57 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"3"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1751)
+
+
+  [1m[36mClub Load (1.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 1961)
+
+
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2276)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:22:02 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.4ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:22:02 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:22:02 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:22:02 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 08:22:02 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 157ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1727)
+
+
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 2295)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+Completed 200 OK in 165ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 5200)
+
+
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1216)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:23:11 -0400
+Processing by ClubsController#index as HTML
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1475)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:59:45 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5406)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:59:45 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:59:45 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 08:59:45 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:59:45 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1477)
+
+
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"5"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1941)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3098)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 4143)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 08:59:54 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 08:59:54 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 08:59:54 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 08:59:54 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 08:59:54 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2620)
+
+
+  [1m[36mClub Load (2.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2397)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 4361)
+
+
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 1791)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:00:28 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:00:28 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:00:28 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:00:28 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:00:28 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"2"}
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 2671)
+
+
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1423)
+
+
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 2981)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1015)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:00:44 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.6ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:00:44 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:00:44 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:00:44 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:00:44 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (1.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 3380)
+
+
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (1.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2425)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2454)
+
+
+  [1m[36mClub Load (2.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2289)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:34:21 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 5408)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:34:21 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:34:21 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:34:21 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:34:21 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1674)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (1.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 2262)
+
+
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (5.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 4014)
+
+
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2836)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:36:09 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.6ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 5283)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:36:09 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:36:09 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:36:09 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:36:09 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"2"}
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2641)
+
+
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3283)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 3857)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 4961)
+
+
+Started POST "/bags" for ::1 at 2020-07-28 09:36:21 -0400
+Processing by BagsController#create as JSON
+  Parameters: {"name"=>"Kait", "bag"=>{"name"=>"Kait"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+  [1m[36mBag Create (0.7ms)[0m  [1m[32mINSERT INTO "bags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kait"], ["created_at", "2020-07-28 13:36:21.334728"], ["updated_at", "2020-07-28 13:36:21.334728"]]
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bags_controller.rb:29:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2504)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:36:23 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.5ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 6250)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:36:23 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:36:23 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:36:23 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:36:23 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:36:23 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2027)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3522)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Processing by ClubsController#index as */*
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3929)
+
+
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1222)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 931)
+
+
+Started POST "/bags/6/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Processing by ClubsController#create as JSON
+  Parameters: {"club_type"=>"Driver", "brand"=>"Titlest", "model"=>"Max", "loft"=>"3", "bag_id"=>"6", "club"=>{"club_type"=>"Driver", "loft"=>"3", "brand"=>"Titlest", "model"=>"Max"}}
+  [1m[36mBag Load (0.5ms)[0m  [1m[34mSELECT "bags".* FROM "bags" WHERE "bags"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/clubs_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+  [1m[36mClub Create (1.8ms)[0m  [1m[32mINSERT INTO "clubs" ("club_type", "loft", "brand", "model", "bag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["club_type", "Driver"], ["loft", "3"], ["brand", "Titlest"], ["model", "Max"], ["bag_id", 6], ["created_at", "2020-07-28 13:36:33.811856"], ["updated_at", "2020-07-28 13:36:33.811856"]]
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/clubs_controller.rb:12:in `create'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 3506)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:36:33 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1477)
+
+
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:36:33 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"6"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 1799)
+
+
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (1.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 1382)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2463)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 2287)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:39:18 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:39:18 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:39:18 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:39:18 -0400
+Processing by ClubsController#index as */*
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:39:18 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:39:18 -0400
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 2945)
+
+
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"2"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2606)
+
+
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (2.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (3.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 2809)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3491)
+
+
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 3774)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:40:00 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.4ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 6349)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:40:00 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:40:00 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:40:00 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:40:00 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:40:00 -0400
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2652)
+
+
+  [1m[36mClub Load (1.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2672)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 4707)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 3889)
+
+
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 5142)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:41:54 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.7ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:41:54 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:41:54 -0400
+Processing by ClubsController#index as */*
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:41:54 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:41:54 -0400
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:41:54 -0400
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2468)
+
+
+  Parameters: {"bag_id"=>"3"}
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"6"}
+  Parameters: {"bag_id"=>"5"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1969)
+
+
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (1.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1422)
+
+
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3579)
+
+
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2983)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:42:23 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:42:23 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:42:23 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:42:23 -0400
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1708)
+
+
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:42:23 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:42:23 -0400
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  Parameters: {"bag_id"=>"6"}
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2966)
+
+
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3361)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2500)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4633)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:43:41 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.6ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:43:41 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:43:41 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:43:41 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:43:41 -0400
+Processing by ClubsController#index as */*
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:43:41 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (2.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2571)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"6"}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3058)
+
+
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 2108)
+
+
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 5037)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 2578)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:43:46 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.5ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:43:46 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:43:46 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:43:46 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:43:46 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:43:46 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (2.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"3"}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1878)
+
+
+  Parameters: {"bag_id"=>"6"}
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3167)
+
+
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3152)
+
+
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2356)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 2507)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:43:50 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:43:51 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:43:51 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:43:51 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:43:51 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:43:51 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+Processing by ClubsController#index as */*
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"3"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"6"}
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3176)
+
+
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 3082)
+
+
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3190)
+
+
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2987)
+
+
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 2412)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:43:54 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:43:54 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:43:54 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:43:54 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:43:54 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:43:54 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 3376)
+
+
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (1.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 4307)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 3204)
+
+
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3909)
+
+
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6027)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:44:30 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:44:30 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:44:30 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:44:30 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:44:30 -0400
+Processing by ClubsController#index as */*
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:44:30 -0400
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"2"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  [1m[36mClub Load (2.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 3518)
+
+
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (2.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 4005)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 3622)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5732)
+
+
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5294)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:44:34 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:44:34 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:44:34 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:44:34 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:44:34 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:44:34 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"6"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  Parameters: {"bag_id"=>"5"}
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2470)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 2339)
+
+
+  [1m[36mClub Load (3.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 4695)
+
+
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4121)
+
+
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 2994)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:44:49 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.4ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:44:49 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:44:49 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:44:49 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:44:49 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:44:49 -0400
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1629)
+
+
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"6"}
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  Parameters: {"bag_id"=>"3"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2161)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2692)
+
+
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 4054)
+
+
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3736)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:47:14 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:47:14 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:47:14 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:47:14 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:47:14 -0400
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:47:14 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"2"}
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3333)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  Parameters: {"bag_id"=>"6"}
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3121)
+
+
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 3831)
+
+
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 4229)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1619)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:47:20 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (0.3ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:47:21 -0400
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:47:21 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:47:21 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:47:21 -0400
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:47:21 -0400
+  [1m[36mClub Load (1.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2329)
+
+
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"5"}
+  Parameters: {"bag_id"=>"2"}
+  Parameters: {"bag_id"=>"6"}
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2844)
+
+
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2599)
+
+
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3363)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 4429)
+
+
+Started GET "/bags" for ::1 at 2020-07-28 09:47:47 -0400
+Processing by BagsController#index as */*
+  [1m[36mBag Load (1.1ms)[0m  [1m[34mSELECT "bags".* FROM "bags"[0m
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+  ↳ app/controllers/bags_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 6348)
+
+
+Started GET "/bags/1/clubs" for ::1 at 2020-07-28 09:47:47 -0400
+Started GET "/bags/2/clubs" for ::1 at 2020-07-28 09:47:47 -0400
+Processing by ClubsController#index as */*
+Started GET "/bags/6/clubs" for ::1 at 2020-07-28 09:47:47 -0400
+Started GET "/bags/3/clubs" for ::1 at 2020-07-28 09:47:47 -0400
+  Parameters: {"bag_id"=>"1"}
+Started GET "/bags/5/clubs" for ::1 at 2020-07-28 09:47:47 -0400
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 1]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Processing by ClubsController#index as */*
+Processing by ClubsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2140)
+
+
+Processing by ClubsController#index as */*
+  Parameters: {"bag_id"=>"2"}
+  Parameters: {"bag_id"=>"3"}
+  Parameters: {"bag_id"=>"6"}
+Processing by ClubsController#index as */*
+  [1m[36mClub Load (2.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 2]]
+  [1m[36mClub Load (1.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 3]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+  [1m[36mClub Load (1.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 6]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 1754)
+
+
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2480)
+
+
+  Parameters: {"bag_id"=>"5"}
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3214)
+
+
+  [1m[36mClub Load (0.9ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."bag_id" = $1[0m  [["bag_id", 5]]
+  ↳ app/controllers/clubs_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1268)
+
+
