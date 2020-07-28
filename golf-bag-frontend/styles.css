@@ -2,14 +2,52 @@ body {
   background-color: darkslategray;
 }
 header {
+  text-align: center;
   color: aliceblue;
 }
 .create-bag-title {
   color: aliceblue;
 }
-.push-right {
-  padding-right: 3%;
+.row {
+  margin: auto;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+
 }
+.card {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+  background-image: url(images/golf-ball-background-icon-graphic-vector-10147058.jpg);
+  position: relative;
+  box-sizing: border-box;
+  height: 470px;
+  width: 470px;
+  margin: auto;
+  margin-bottom: 1%;
+  border-radius: 50%;
+}
+.card-text {
+  font-weight: bold;
+}
+.bag-name {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7rem;
+  font-size: xx-large;
+}
+.form-control {
+  width: 500px;
+  margin: auto;
+  margin-bottom: 1%;
+}
+.btn {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 
@@ -26,4 +64,5 @@ header {
 .add-club {
   text-align: center;
 }
+
 

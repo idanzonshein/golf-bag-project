@@ -25,8 +25,6 @@ private
       :loft,
       :brand,
       :model,
-      :price,
-      :handedness,
       :lie,
       :bag_id
     )

@@ -9,21 +9,20 @@ function appendBags(bags) {
   const bagList = document.querySelector("#bag-list")
   for (const bag of bags) {
     const bagEl = document.createElement("li")
-    bagEl.classList.add("list-group-item")
+    bagEl.classList.add("card")
     bagEl.id = `bag-id-${bag.id}`
 
     bagEl.innerHTML = `
-      <span>${bag.name}'s Bag</span>
+      <span class="bag-name">${bag.name}'s Bag</span>
       <button id="delete-bag-${bag.id}"class="btn btn-danger btn-sm pull-right">Delete</button>
       <ol id="data-bag-id-${bag.id}"></ol>
     `
-    bagList.appendChild(bagEl)
+    bagList.prepend(bagEl)
     listenForDeleteButton(bag)
     getClubsInBag(bag)
   }
   listenForBagSave()
   listenForAddClub()
-
 
 
 }
@@ -39,9 +38,9 @@ function appendClubs(bag) {
   const clubOl = document.querySelector(`#data-bag-id-${bag[0].bag_id}`)
   for(const club of bag) {
     const clubEl = document.createElement("li")
-    clubEl.classList.add("list-group-item")
+    clubEl.classList.add("card-text")
     clubEl.innerHTML = `
-    ${club.club_type}---${club.brand}---${club.model}---Loft: ${club.loft}---Hand: ${club.handedness}
+    Type: ${club.club_type}||Brand: ${club.brand}||Model: ${club.model}||Loft: ${club.loft}||Lie: ${club.lie}
     `
     clubOl.appendChild(clubEl)
   }
@@ -142,6 +141,7 @@ function addNewClubToBag() {
   const clubBrandEl = document.querySelector("#add-brand-input")
   const clubModelEl = document.querySelector("#add-model-input")
   const clubLoftEl = document.querySelector("#add-loft-input")
+  const clubLieEl = document.querySelector("#add-lie-input")
 
 
   fetch(`http://localhost:3000/bags/${selectNameEl.value}/clubs`, {
@@ -154,7 +154,8 @@ function addNewClubToBag() {
         club_type: clubTypeEl.value,
         brand: clubBrandEl.value,
         model: clubModelEl.value,
-        loft: clubLoftEl.value
+        loft: clubLoftEl.value,
+        lie: clubLieEl.value
       })
   }).then(function(resp) {
     return resp.json()

@@ -17,9 +17,10 @@
         <form id="new-bag-form">
           <label class="create-bag-title" for="add-comment-input"> <h4>Create a new Bag Here:</h4> </label>
           <input class="form-control" type="text" id="add-bagName-input" />
-          <button class="btn btn-success buttons" type="submit" name="comment-button">Name Bag</button>
+          <button class="btn btn-success buttons" type="submit" name="comment-button">Create Bag</button>
         </form>
       </div>
+
 
 
       <div id="bag-club-build" class= build-club>
@@ -45,17 +46,34 @@
           </select><br><br>
 
           <strong><label>Brand:</label></strong>
-          <input type="text" id="add-brand-input"/>
+          <select id="add-brand-input">
+            <option value="TaylorMade" selected="selected">TaylorMade</option>
+            <option value="Callaway">Callaway</option>
+            <option value="PING">PING</option>
+            <option value="Nike">Nike</option>
+            <option value="Titleist">Titleist</option>
+            <option value="Odyssey">Odyssey</option>
+            <option value="Mizuno">Mizuno</option>
+            <option value="Top Flight">Top Flight</option>
+          </select>
+
+
+
           <strong><label>Model:</label></strong>
           <input type="text" id="add-model-input"/>
           <strong><label>Loft:</label></strong>
           <input type="text" id="add-loft-input"/><br>
+          <strong><label>Lie Angle:</label></strong>
+          <select id="add-lie-input">
+            <option value="3 Flat">3 Flat</option>
+            <option value="2 Flat">2 Flat</option>
+            <option value="1 Flat">1 Flat</option>
+            <option value="STD" selected="selected">STD</option>
+            <option value="1 Up">1 Up</option>
+            <option value="2 Up">2 Up</option>
+            <option value="3 Up">3 Up</option>
+          </select><br><br>
 
-          <strong><label class="push-right">Hand:</label></strong>
-          <input class="form-check-input" type="checkbox" value="Right" id="right-hand-check">
-          <label class="push-right" for="defaultCheck1">Right Hand</label>
-          <input class="form-check-input" type="checkbox" value="Left" id="left-hand-check">
-          <label class="push-right" for="defaultCheck2">Left Hand</label><br><br>
 
           <button id="submit-club" type="submit">Add To Bag</button>
 
@@ -63,16 +81,14 @@
 
       </div>
 
-      <div id="bag-list" class="list-group">
-
-        <!-- <ul id="clubs-of-bag">
 
 
-        </ul> -->
+      <div class='row'>
 
 
 
 
+      <div id="bag-list" class="row">
 
 
 

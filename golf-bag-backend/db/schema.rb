@@ -27,8 +27,6 @@ ActiveRecord::Schema.define(version: 2020_07_22_191256) do
     t.string "loft"
     t.string "brand"
     t.string "model"
-    t.integer "price"
-    t.string "handedness"
     t.string "lie"
     t.string "image_source"
     t.integer "bag_id"
