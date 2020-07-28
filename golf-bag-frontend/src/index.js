@@ -21,8 +21,9 @@ function appendBags(bags) {
     listenForDeleteButton(bag)
     getClubsInBag(bag)
   }
-
+  listenForBagSave()
   listenForAddClub()
+
 
 
 }
@@ -56,12 +57,13 @@ function grabAllBags() {
   })
 }
 
-const BagNameSave = document.querySelector("#new-bag-form")
-BagNameSave.addEventListener("submit", function(event) {
-  event.preventDefault()
-    createBag()
-
-})
+function listenForBagSave() {
+  const BagNameSave = document.querySelector("#new-bag-form")
+  BagNameSave.addEventListener("submit", function(event) {
+    event.preventDefault()
+      createBag()
+  })
+}
 
 function listenForDeleteButton(bag) {
   const delButton = document.getElementById(`delete-bag-${bag.id}`)

@@ -9,13 +9,13 @@
   <body>
 
     <header>
-      <h1>Golf Bag Customizer</h1>
+      <h1>Golf Bag Creator</h1>
     </header>
 
 
     <div class="container">
         <form id="new-bag-form">
-          <label for="add-comment-input"> <h4>Create a new Bag Here:</h4> </label>
+          <label class="create-bag-title" for="add-comment-input"> <h4>Create a new Bag Here:</h4> </label>
           <input class="form-control" type="text" id="add-bagName-input" />
           <button class="btn btn-success buttons" type="submit" name="comment-button">Name Bag</button>
         </form>
@@ -51,11 +51,11 @@
           <strong><label>Loft:</label></strong>
           <input type="text" id="add-loft-input"/><br>
 
-          <strong><label>Hand:</label></strong>
+          <strong><label class="push-right">Hand:</label></strong>
           <input class="form-check-input" type="checkbox" value="Right" id="right-hand-check">
-          <label class="form-check-label" for="defaultCheck1">Right Hand</label>
+          <label class="push-right" for="defaultCheck1">Right Hand</label>
           <input class="form-check-input" type="checkbox" value="Left" id="left-hand-check">
-          <label class="form-check-label" for="defaultCheck2">Left Hand</label><br><br>
+          <label class="push-right" for="defaultCheck2">Left Hand</label><br><br>
 
           <button id="submit-club" type="submit">Add To Bag</button>
 

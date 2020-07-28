@@ -1,3 +1,17 @@
+body {
+  background-color: darkslategray;
+}
+header {
+  color: aliceblue;
+}
+.create-bag-title {
+  color: aliceblue;
+}
+.push-right {
+  padding-right: 3%;
+}
+
+
 
 .build-club {
   margin: auto;
@@ -12,6 +26,4 @@
 .add-club {
   text-align: center;
 }
-/* .bag-club-build {
 
-} */
