@@ -14,21 +14,68 @@
 
 
     <div class="container">
-        <form id="new-club-form">
-          <label for="add-comment-input"> <h4>Add Your Bag!</h4> </label>
+        <form id="new-bag-form">
+          <label for="add-comment-input"> <h4>Create a new Bag Here:</h4> </label>
           <input class="form-control" type="text" id="add-bagName-input" />
           <button class="btn btn-success buttons" type="submit" name="comment-button">Name Bag</button>
         </form>
       </div>
 
-      <div id="bag-build">
+
+      <div id="bag-club-build" class= build-club>
+
+        <div id="name-dropdown">
+          <h3>Select Bag:</h3>
+          <select id="pick-bag-name">
+
+          </select>
+        </div><br>
+
+
+
+
+        <form id="new-club-form">
+          <strong><label for="add-club-type">Club Type:</label></strong>
+
+          <select id="add-club-type">
+            <option value="Driver" selected="selected">Driver</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Iron">Iron</option>
+            <option value="Putter">Putter</option>
+          </select><br><br>
+
+          <strong><label>Brand:</label></strong>
+          <input type="text" id="add-brand-input"/>
+          <strong><label>Model:</label></strong>
+          <input type="text" id="add-model-input"/>
+          <strong><label>Loft:</label></strong>
+          <input type="text" id="add-loft-input"/><br>
+
+          <strong><label>Hand:</label></strong>
+          <input class="form-check-input" type="checkbox" value="Right" id="right-hand-check">
+          <label class="form-check-label" for="defaultCheck1">Right Hand</label>
+          <input class="form-check-input" type="checkbox" value="Left" id="left-hand-check">
+          <label class="form-check-label" for="defaultCheck2">Left Hand</label><br><br>
+
+          <button id="submit-club" type="submit">Add To Bag</button>
+
+        </form>
 
       </div>
 
-      <div>
-        <ul id="bag-list" class="list-group">
+      <div id="bag-list" class="list-group">
 
-        </ul>
+        <!-- <ul id="clubs-of-bag">
+
+
+        </ul> -->
+
+
+
+
+
+
+
       </div>
 
 

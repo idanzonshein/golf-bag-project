@@ -1,9 +1,17 @@
-.vertical {
-  border-left: 6px solid black;
-  height: 900px;
-  position: relative;
-  left: 65%;
-  margin-left: -3px;
-  top: 0;
-  padding: 10px;
+
+.build-club {
+  margin: auto;
+  height: 300px;
+  width: 800px;
+  background-color: grey;
 }
+.container {
+  padding-bottom: 2%;
+  text-align: center;
+}
+.add-club {
+  text-align: center;
+}
+/* .bag-club-build {
+
+} */
